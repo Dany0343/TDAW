@@ -1,0 +1,116 @@
+*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #0f172a; /*Aquí se cambia el color de fondo*/
+}
+.rgb {
+	--angle: 0deg;
+	width: 90vw;
+   min-height: 400px;
+	height: auto;
+	border:  solid;
+	border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+	
+	animation: 10s rotate linear infinite;
+}
+.container-full{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+.efectolinea {
+   display: block;
+}
+.rgb {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.footer p {
+    color:aliceblue;
+}
+.dropdown {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+p,h1 {
+    color: aliceblue;
+}
+.channel-split-wrapper {
+    position: relative;
+    font-size: 64px;
+ }
+ 
+ .channel-split-static {
+    opacity: 0;
+ }
+ 
+ .channel-split {
+    position: absolute;
+    top: 0;
+    left: 0;
+    mix-blend-mode: difference;   
+ }
+ 
+ .channel-split-red {
+    color: #f00;
+    animation: ANIMATE-RED 2000ms infinite;
+ }
+ 
+ .channel-split-green {
+    color: #0f0;
+ }
+ 
+ .channel-split-blue {
+    color: #00f;
+    animation: ANIMATE-BLUE 2000ms infinite;
+ }
+ 
+ @keyframes ANIMATE-RED {
+    0% {
+       transform: translate(0, 0)
+    }
+    50% {
+       transform: translate(5px, 5px)
+    }
+    100% {
+       transform: translate(0, 0)
+    }
+ }
+ 
+ @keyframes ANIMATE-BLUE {
+    0% {
+       transform: translate(0, 0)
+    }
+    50% {
+       transform: translate(-5px, -5px)
+    }
+    100% {
+       transform: translate(0, 0)
+    }
+ }
+@keyframes rotate {
+	to {
+		--angle: 360deg;
+	}
+}
+
+@property --angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
+}
