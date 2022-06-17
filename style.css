@@ -11,7 +11,7 @@ body{
 .rgb {
 	--angle: 0deg;
 	width: 90vw;
-   min-height: 400px;
+   min-height: 600px;
 	height: auto;
 	border:  solid;
 	border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
